@@ -1,10 +1,9 @@
 import React, {Component} from 'react'
 import {View, Text, StyleSheet, Image} from 'react-native'
 import {COLORS, Spacing, Typography} from '../template'
-import FastImage from 'react-native-fast-image'
 import rate_down from '../assets/images/rate/rate_down.png'
 import rate_up from '../assets/images/rate/rate_up.png'
-import {text} from '../template/typography'
+import LinearGradient from 'react-native-linear-gradient'
 
 export default class CryptoItem extends Component {
   constructor(props) {
@@ -27,6 +26,7 @@ export default class CryptoItem extends Component {
           {renderQuoteChange(quoteUSD.percent_change_7d, 'week')}
         </View>
       </View>
+      <LinearGradient colors={[COLORS.TRANSPARENT, COLORS.LIGHT_BLUE, COLORS.BLUE]} style={styles.linearGradient}/>
     </View>)
   }
 }
@@ -43,10 +43,12 @@ const renderQuoteChange = (percentage, percentageDetails) => !percentage ? <View
 
 const styles = StyleSheet.create({
   container: {
-    ...Spacing.horizontalSpacing,
-    ...Spacing.section
+    paddingVertical: 5,
+    marginBottom: 12,
+    marginHorizontal: 10
   },
   content: {
+    marginHorizontal: 10,
     flexDirection: 'row',
     alignItems: 'center'
   },
@@ -92,6 +94,15 @@ const styles = StyleSheet.create({
   quotePercentageDetails: {
     color: COLORS.LIGHT_BLUE,
     fontSize: 10
+  },
+
+  linearGradient: {
+    position: 'absolute',
+    top: 0, bottom: 0,
+    flex: 1,
+    right: 0, left: 0,
+    borderRadius: 10,
+    opacity: .1
   }
 })
 

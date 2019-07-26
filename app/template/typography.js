@@ -17,7 +17,6 @@ export const boldText = {
   fontWeight: 'bold'
 }
 
-
 export const sectionTitle={
   fontSize: 16,
   alignSelf: 'center',
