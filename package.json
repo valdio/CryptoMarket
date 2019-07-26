@@ -10,6 +10,7 @@
     "prop-types": "^15.7.2",
     "react": "16.8.6",
     "react-native": "0.60.4",
+    "react-native-fast-image": "^7.0.2",
     "react-redux": "^7.1.0",
     "react-router-native": "^5.0.1",
     "redux": "^4.0.4",

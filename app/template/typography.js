@@ -8,10 +8,19 @@ export const appHeader = {
 
 export const text = {
   fontSize: 14,
-  color: COLORS.TEXT_COLOR
+  color: COLORS.TEXT_COLOR,
+  alignSelf: 'center'
 }
 
 export const boldText = {
   ...text,
   fontWeight: 'bold'
+}
+
+
+export const sectionTitle={
+  fontSize: 16,
+  alignSelf: 'center',
+  fontWeight: 'bold',
+  color: COLORS.DARK_TEXT_COLOR
 }
