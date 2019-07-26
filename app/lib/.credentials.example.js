@@ -1,0 +1,3 @@
+export const CREDENTIALS = {
+  COIN_MARKET_CAP_KEY: 'COIN_MARKET_CAP_KEY',
+};
