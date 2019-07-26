@@ -1,5 +1,5 @@
-// import * as SomeAction from './someAction'
+import * as Crypto from './crypto'
 
 export const ActionCreators = Object.assign({},
-  // SomeAction
-);
+  Crypto
+)

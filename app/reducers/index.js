@@ -1,6 +1,6 @@
-import {combineReducers} from 'redux';
-// import * as someReducer from './someReducer';
+import {combineReducers} from 'redux'
+import * as cryptoReducer from './crypto'
 
 export default combineReducers(Object.assign(
-  // someReducer,
-));
+  cryptoReducer
+))
