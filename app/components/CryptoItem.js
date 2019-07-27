@@ -1,33 +1,26 @@
-import React, {Component} from 'react'
+import React from 'react'
 import {View, Text, StyleSheet, Image} from 'react-native'
 import {COLORS, Spacing, Typography} from '../template'
 import rate_down from '../assets/images/rate/rate_down.png'
 import rate_up from '../assets/images/rate/rate_up.png'
 import LinearGradient from 'react-native-linear-gradient'
 
-export default class CryptoItem extends Component {
-  constructor(props) {
-    super(props)
-  }
-
-  render() {
-    const {item} = this.props
-    const quoteUSD = item && item.quote && item.quote.USD || {}//inline validation
-    return (<View style={styles.container}>
-      <View style={styles.content}>
-        <View style={styles.symbolContainer}>
-          <Text style={styles.symbolText}>{item.symbol}</Text>
-        </View>
-        <Text style={styles.cryptoName}>{item.name}</Text>
-        <View style={styles.statsHolder}>
-          {renderQuoteChange(quoteUSD.percent_change_1h, 'hour')}
-          {renderQuoteChange(quoteUSD.percent_change_24h, 'day')}
-          {renderQuoteChange(quoteUSD.percent_change_7d, 'week')}
-        </View>
+export default CryptoItem = ({item} = props) => {
+  const quoteUSD = item && item.quote && item.quote.USD || {}//inline validation
+  return (<View style={styles.container}>
+    <View style={styles.content}>
+      <View style={styles.symbolContainer}>
+        <Text style={styles.symbolText}>{item.symbol}</Text>
       </View>
-      <LinearGradient colors={[COLORS.TRANSPARENT, COLORS.LIGHT_BLUE, COLORS.BLUE]} style={styles.linearGradient}/>
-    </View>)
-  }
+      <Text style={styles.cryptoName}>{item.name}</Text>
+      <View style={styles.statsHolder}>
+        {renderQuoteChange(quoteUSD.percent_change_1h, 'hour')}
+        {renderQuoteChange(quoteUSD.percent_change_24h, 'day')}
+        {renderQuoteChange(quoteUSD.percent_change_7d, 'week')}
+      </View>
+    </View>
+    <LinearGradient colors={[COLORS.TRANSPARENT, COLORS.LIGHT_BLUE, COLORS.BLUE]} style={styles.linearGradient}/>
+  </View>)
 }
 
 const renderQuoteChange = (percentage, percentageDetails) => !percentage ? <View/> :

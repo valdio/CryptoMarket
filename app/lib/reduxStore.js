@@ -1,23 +1,23 @@
-import {createStore} from 'redux';
-import {persistStore, persistReducer} from 'redux-persist';
-import storage from 'redux-persist/lib/storage'; // defaults to localStorage for web and AsyncStorage for react-native
-import rootReducer from '../reducers';
+import {createStore} from 'redux'
+import {persistStore, persistReducer} from 'redux-persist'
+import storage from 'redux-persist/lib/storage' // defaults to localStorage for web and AsyncStorage for react-native
+import rootReducer from '../reducers'
 
 const persistConfig = {
   key: 'root',
-  storage,
-};
+  storage
+}
 
 // import extra middleware for redux store
-import storeEnhancer from './storeMiddleware';
+import storeEnhancer from './storeMiddleware'
 
 // Empty initial state. Add data if need be
-let initialState = {};
+let initialState = {}
 
-const persistedReducer = persistReducer(persistConfig, rootReducer);
+const persistedReducer = persistReducer(persistConfig, rootReducer)
 
 export default () => {
-  let store = createStore(persistedReducer, initialState, storeEnhancer);
-  let persistor = persistStore(store);
-  return {store, persistor};
+  let store = createStore(persistedReducer, initialState, storeEnhancer)
+  let persistor = persistStore(store)
+  return {store, persistor}
 }
