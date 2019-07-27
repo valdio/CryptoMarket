@@ -13,7 +13,6 @@ export default class CryptoItem extends Component {
   render() {
     const {item} = this.props
     const quoteUSD = item && item.quote && item.quote.USD || {}//inline validation
-    console.log(item)
     return (<View style={styles.container}>
       <View style={styles.content}>
         <View style={styles.symbolContainer}>
@@ -101,7 +100,7 @@ const styles = StyleSheet.create({
     top: 0, bottom: 0,
     flex: 1,
     right: 0, left: 0,
-    borderRadius: 10,
+    borderRadius: 6,
     opacity: .1
   }
 })
