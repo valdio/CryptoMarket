@@ -49,7 +49,6 @@ const styles = StyleSheet.create({
     height: 60,
     width: 60
   },
-
   cardTitle: {
     ...Typography.boldText,
     color: COLORS.DARK_TEXT_COLOR,
