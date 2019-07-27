@@ -17,5 +17,15 @@ export const crypto = createReducer({}, {
       list: action.isFirstPageLoad ? cryptos //reset the array of data
         : itemsAlreadyInserted ? [...state.list] : [...state.list, ...cryptos] // append new data to the existing ones
     }
+  },
+  [types.CRYPTO_META_DATA](state, action) {
+    const metadata = action.response && action.response.data && action.response.data[action.cryptoID] || {}
+    return {
+      ...state,
+      metadata: {
+        ...state.metadata,
+        [action.cryptoID]: metadata
+      }
+    }
   }
 })

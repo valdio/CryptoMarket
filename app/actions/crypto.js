@@ -32,4 +32,34 @@ function cryptocurrenciesReceived(response, isFirstPageLoad) {
   }
 }
 
+/**
+ * Method to request information abbot crypocurrencty metadata.
+ * @param cryptoID
+ * @param callback
+ * @returns {function(*, *): Promise<T>}
+ */
+export function getCryptoMetadata(cryptoID, callback) {
+  return (dispatch, getState) => {
+    if (!cryptoID) return
+    return Api.get(`/cryptocurrency/info?id=${cryptoID}`).then(response => {
+      if (response && response.data) {
+        callback && callback(buildResponse(response, undefined))
+        dispatch(cryptoMetaDataReceived(cryptoID, response))
+      } else
+        callback && callback(buildResponse(undefined, response.error || 'Default error message'))
+    }).catch((exception) => {
+      //handle exception
+      callback && callback(buildResponse(undefined, 'Default error message'))
+    })
+  }
+}
+
+function cryptoMetaDataReceived(cryptoID, response) {
+  return {
+    type: types.CRYPTO_META_DATA,
+    cryptoID,
+    response
+  }
+}
+
 
