@@ -7,12 +7,16 @@ export default {
     flex: 1
   },
   content: {
-    flex: 1
+    flex: 1,
+    paddingVertical: 40
   },
   linearGradient: {
     position: 'absolute',
     top: 0,
     right: 0, left: 0,
     height: DEVICE.HEIGHT
+  },
+  detailsSection: {
+
   }
 }
