@@ -13,9 +13,9 @@ export default CryptoItem = ({item} = props) => {
                 underlayColor={COLORS.BACKGROUND}><View style={styles.container}>
     <View style={styles.content}>
       <View style={styles.symbolContainer}>
-        <Text style={styles.symbolText}>{item.symbol}</Text>
+        <Text style={styles.symbolText} testID="card-symbol">{item.symbol}</Text>
       </View>
-      <Text style={styles.cryptoName}>{item.name}</Text>
+      <Text style={styles.cryptoName} testID="card-title">{item.name}</Text>
       <View style={styles.statsHolder}>
         {renderQuoteChange(quoteUSD.percent_change_1h, 'hour')}
         {renderQuoteChange(quoteUSD.percent_change_24h, 'day')}

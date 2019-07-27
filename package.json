@@ -4,11 +4,10 @@
   "private": true,
   "scripts": {
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest --testPathIgnorePatterns mock.js --watchAll"
   },
   "dependencies": {
     "native-base": "^2.13.4",
-    "prop-types": "^15.7.2",
     "react": "16.8.6",
     "react-native": "0.60.4",
     "react-native-fast-image": "^7.0.2",
@@ -25,11 +24,19 @@
     "@babel/core": "^7.5.5",
     "@babel/runtime": "^7.5.5",
     "babel-jest": "^24.8.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
     "jest": "^24.8.0",
+    "jest-environment-enzyme": "^7.0.2",
+    "jest-enzyme": "^7.0.2",
     "metro-react-native-babel-preset": "^0.55.0",
+    "react-dom": "^16.8.6",
     "react-test-renderer": "16.8.6"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "transformIgnorePatterns": [
+      "node_modules/(?!react-native|react-router-native)/"
+    ]
   }
 }

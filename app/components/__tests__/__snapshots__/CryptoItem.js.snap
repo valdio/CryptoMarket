@@ -1,0 +1,285 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders CryptoItem using Snapshots 1`] = `
+<View
+  accessible={true}
+  clickable={true}
+  isTVSelectable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={null}
+>
+  <View
+    style={
+      Object {
+        "marginBottom": 12,
+        "marginHorizontal": 10,
+        "paddingVertical": 5,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "marginHorizontal": 10,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#AAC4F8",
+            "borderRadius": 25,
+            "height": 50,
+            "justifyContent": "center",
+            "width": 50,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "alignSelf": "center",
+              "color": "#404D66",
+              "fontSize": 14,
+              "fontWeight": "bold",
+            }
+          }
+          testID="card-symbol"
+        >
+          BTC
+        </Text>
+      </View>
+      <Text
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#484848",
+            "fontSize": 16,
+            "fontWeight": "bold",
+            "marginHorizontal": 6,
+          }
+        }
+        testID="card-title"
+      >
+        Bitcoin
+      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "flexDirection": "row",
+            "justifyContent": "flex-end",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "marginHorizontal": 5,
+            }
+          }
+        >
+          <Image
+            source={
+              Object {
+                "testUri": "../../../app/assets/images/rate/rate_down.png",
+              }
+            }
+            style={
+              Object {
+                "height": 20,
+                "resizeMode": "contain",
+                "width": 20,
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+              }
+            }
+          >
+            <Text
+              stule={
+                Object {
+                  "color": "#AAC4F8",
+                  "fontSize": 12,
+                }
+              }
+            >
+              -0.15
+              %
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#AAC4F8",
+                  "fontSize": 10,
+                }
+              }
+            >
+              $/
+              hour
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "marginHorizontal": 5,
+            }
+          }
+        >
+          <Image
+            source={
+              Object {
+                "testUri": "../../../app/assets/images/rate/rate_up.png",
+              }
+            }
+            style={
+              Object {
+                "height": 20,
+                "resizeMode": "contain",
+                "width": 20,
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+              }
+            }
+          >
+            <Text
+              stule={
+                Object {
+                  "color": "#AAC4F8",
+                  "fontSize": 12,
+                }
+              }
+            >
+              0.52
+              %
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#AAC4F8",
+                  "fontSize": 10,
+                }
+              }
+            >
+              $/
+              day
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "marginHorizontal": 5,
+            }
+          }
+        >
+          <Image
+            source={
+              Object {
+                "testUri": "../../../app/assets/images/rate/rate_up.png",
+              }
+            }
+            style={
+              Object {
+                "height": 20,
+                "resizeMode": "contain",
+                "width": 20,
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+              }
+            }
+          >
+            <Text
+              stule={
+                Object {
+                  "color": "#AAC4F8",
+                  "fontSize": 12,
+                }
+              }
+            >
+              0.99
+              %
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#AAC4F8",
+                  "fontSize": 10,
+                }
+              }
+            >
+              $/
+              week
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+    <BVLinearGradient
+      colors={
+        Array [
+          0,
+          4289381624,
+          4282223615,
+        ]
+      }
+      endPoint={
+        Object {
+          "x": 0.5,
+          "y": 1,
+        }
+      }
+      locations={null}
+      startPoint={
+        Object {
+          "x": 0.5,
+          "y": 0,
+        }
+      }
+      style={
+        Object {
+          "borderRadius": 6,
+          "bottom": 0,
+          "flex": 1,
+          "left": 0,
+          "opacity": 0.1,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    />
+  </View>
+</View>
+`;

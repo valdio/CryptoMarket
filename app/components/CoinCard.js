@@ -7,14 +7,15 @@ export default CoinCard = ({metadata} = props) => {
   return (<View style={styles.container}>
     <View style={styles.iconContainer}>
       <FastImage
+        testID="card-coinIcon"
         style={styles.coinIcon}
         source={{uri: metadata.logo || '', priority: FastImage.priority.normal}}
         resizeMode={FastImage.resizeMode.contain}
       />
     </View>
     <View style={styles.content}>
-      <Text style={styles.cardTitle}>{metadata.name}</Text>
-      <Text style={styles.description}>{metadata.description}</Text>
+      <Text style={styles.cardTitle} testID="card-title">{metadata.name}</Text>
+      <Text style={styles.description} testID="card-description">{metadata.description}</Text>
       <View style={styles.tagsHolder}>
         {metadata.tags && metadata.tags.map(tag => <Text key={tag} style={styles.tag}>{tag}</Text>)}
       </View>
@@ -22,8 +23,7 @@ export default CoinCard = ({metadata} = props) => {
   </View>)
 }
 
-
-const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
   container: {
     ...Spacing.horizontalSpacing,
     borderRadius: 5,

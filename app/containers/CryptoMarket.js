@@ -20,7 +20,6 @@ class CryptoMarket extends Component {
   }
 
   render() {
-    console.log(this.props.cryptoList.length)
     return (<View style={styles.container}>
       <AppHeader title='Crypto Stats' background={COLORS.HEADER_COLOR}/>
       <FlatList
