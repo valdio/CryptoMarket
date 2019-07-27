@@ -4,10 +4,13 @@ import {COLORS, Spacing, Typography} from '../template'
 import rate_down from '../assets/images/rate/rate_down.png'
 import rate_up from '../assets/images/rate/rate_up.png'
 import LinearGradient from 'react-native-linear-gradient'
+import {Link} from 'react-router-native'
+import {ROUTE} from '../lib/routing/routes'
 
 export default CryptoItem = ({item} = props) => {
   const quoteUSD = item && item.quote && item.quote.USD || {}//inline validation
-  return (<View style={styles.container}>
+  return (<Link to={`${ROUTE.CRYPTO_DETAILS_TAG}/${item.id}`}
+                underlayColor={COLORS.BACKGROUND}><View style={styles.container}>
     <View style={styles.content}>
       <View style={styles.symbolContainer}>
         <Text style={styles.symbolText}>{item.symbol}</Text>
@@ -20,7 +23,8 @@ export default CryptoItem = ({item} = props) => {
       </View>
     </View>
     <LinearGradient colors={[COLORS.TRANSPARENT, COLORS.LIGHT_BLUE, COLORS.BLUE]} style={styles.linearGradient}/>
-  </View>)
+  </View>
+  </Link>)
 }
 
 const renderQuoteChange = (percentage, percentageDetails) => !percentage ? <View/> :

@@ -20,7 +20,7 @@ class CryptoDetails extends Component {
 
   componentDidMount() {
     //refresh crypto metadata in redux store, if any
-    // this.props.getCryptoMetadata(this.state.cryptoID)
+    this.props.getCryptoMetadata(this.state.cryptoID)
   }
 
   render() {

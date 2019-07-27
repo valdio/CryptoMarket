@@ -1,7 +1,6 @@
 import React from 'react'
-import {View, Text, StyleSheet, Image} from 'react-native'
+import {View, Text, StyleSheet} from 'react-native'
 import {COLORS, Spacing, Typography} from '../template'
-import LinearGradient from 'react-native-linear-gradient'
 import FastImage from 'react-native-fast-image'
 
 export default CoinCard = ({metadata} = props) => {
@@ -35,6 +34,7 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start'
   },
   iconContainer: {
+    backgroundColor: COLORS.WHITE,
     height: 64,
     width: 64,
     borderRadius: 32,
@@ -72,7 +72,6 @@ const styles = StyleSheet.create({
     color: COLORS.GREEN,
     marginHorizontal: 5,
     lineHeight: 17
-
   }
 })
 
