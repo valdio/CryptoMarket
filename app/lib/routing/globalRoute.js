@@ -6,7 +6,7 @@ import CryptoDetails from '../../containers/CryptoDetails'
 export const globalRoutes = [
   {
     route: ROUTE.INDEX,
-    component: CryptoMarket
+    component: CryptoDetails
   },
   {
     route: ROUTE.CRYPTO_DETAILS,

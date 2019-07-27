@@ -4945,6 +4945,11 @@ react-native-vector-icons@6.1.0:
     prop-types "^15.6.2"
     yargs "^8.0.2"
 
+react-native-wave@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/react-native-wave/-/react-native-wave-0.0.3.tgz#a9707cf55e6133ec756d3dc143221ce4a068d9f0"
+  integrity sha512-00cQG3JWreo2rcYr8cD0SadaX82yMld5UAykWMPRuA38OpK8+rukgfeBMWdQr3MKIz+J+sW09bs5bUVff9FRLg==
+
 react-native@0.60.4:
   version "0.60.4"
   resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.60.4.tgz#4378171e63dd5310497e15e54ec9185cb470752d"
