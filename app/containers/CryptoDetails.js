@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {View, Text, ScrollView, StatusBar} from 'react-native'
+import {View, Text, ScrollView, TouchableOpacity, Linking} from 'react-native'
 import {connect} from 'react-redux'
 import styles from './styles/cryptoDetails'
 import AppHeader from '../components/Header'
@@ -7,6 +7,7 @@ import {COLORS} from '../template'
 import back from '../assets/images/back/back_white.png'
 import LinearGradient from 'react-native-linear-gradient'
 import CoinCard from '../components/CoinCard'
+import {firstLetterToUpperCase} from '../utils/textUtils'
 
 class CryptoDetails extends Component {
   constructor(props) {
@@ -24,31 +25,7 @@ class CryptoDetails extends Component {
 
   render() {
     const crypto = this.props.cryptoList.find(item => item.id === this.state.cryptoID) || {}
-    // const metadata = this.props.metadata && this.props.metadata[this.state.cryptoID] || {}
-    const metadata = {
-      'urls': {
-        'website': ['https://bitcoin.org/'],
-        'technical_doc': ['https://bitcoin.org/bitcoin.pdf'],
-        'twitter': [],
-        'reddit': ['https://reddit.com/r/bitcoin'],
-        'message_board': ['https://bitcointalk.org'],
-        'announcement': [],
-        'chat': [],
-        'explorer': ['https://blockchain.coinmarketcap.com/chain/bitcoin', 'https://blockchain.info/', 'https://live.blockcypher.com/btc/', 'https://blockchair.com/bitcoin', 'https://explorer.viabtc.com/btc'],
-        'source_code': ['https://github.com/bitcoin/']
-      },
-      'logo': 'https://s2.coinmarketcap.com/static/img/coins/64x64/1.png',
-      'id': 1,
-      'name': 'Bitcoin',
-      'symbol': 'BTC',
-      'slug': 'bitcoin',
-      'description': 'Bitcoin (BTC) is a consensus network that enables a new payment system and a completely digital currency. Powered by its users, it is a peer to peer payment network that requires no central authority to operate. On October 31st, 2008, an individual or group of individuals operating under the pseudonym "Satoshi Nakamoto" published the Bitcoin Whitepaper and described it as: "a purely peer-to-peer version of electronic cash, which would allow online payments to be sent directly from one party to another without going through a financial institution."',
-      'notice': null,
-      'date_added': '2013-04-28T00:00:00.000Z',
-      'tags': ['mineable'],
-      'platform': null,
-      'category': 'coin'
-    }
+    const metadata = this.props.metadata && this.props.metadata[this.state.cryptoID] || {}
     return (<View style={styles.container}>
       <AppHeader title={crypto.name || 'Crypto'} background={COLORS.HEADER_COLOR}
                  leftImg={back} leftOnPress={() => this.props.history.goBack()}/>
@@ -58,12 +35,26 @@ class CryptoDetails extends Component {
                           style={styles.linearGradient}/>
           <CoinCard metadata={metadata}/>
           <View style={styles.detailsSection}>
-
+            <Text style={styles.readMore}>Read more...</Text>
+            {this._renderCoinUrls(metadata.urls)}
           </View>
         </View>
       </ScrollView>
     </View>)
   }
+
+  _renderCoinUrls = (urls) => {
+    const validData = urls && Object.keys(urls).filter(key => !!(urls[key] && urls[key].length > 0))//filter out only data that have valid URLs
+    return <View style={styles.urlSection}>
+      {validData && validData.map(item => <View key={item}>
+        <Text style={styles.linkSectionTitle}>{firstLetterToUpperCase(item).replace(/_/g, ' ')}</Text>
+        {urls[item].map(url => <TouchableOpacity
+          key={url} onPress={() => Linking.openURL(url)}><Text style={styles.link}
+                                                               numberOfLines={1}>{url}</Text></TouchableOpacity>)}
+      </View>)}
+    </View>
+  }
+
 }
 
 function mapStateToProps(state) {

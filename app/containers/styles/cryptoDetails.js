@@ -1,5 +1,5 @@
 import React from 'react'
-import {COLORS} from '../../template'
+import {COLORS, Spacing, Typography} from '../../template'
 import {DEVICE} from '../../lib/device'
 
 export default {
@@ -17,6 +17,19 @@ export default {
     height: DEVICE.HEIGHT
   },
   detailsSection: {
-
+    ...Spacing.section,
+    marginTop:20
+  },
+  readMore: {},
+  urlSection: {
+    marginHorizontal: 6
+  },
+  linkSectionTitle: {
+    fontSize: 18,
+    marginTop: 6
+  },
+  link: {
+    color: COLORS.BLUE,
+    marginTop: 4
   }
 }

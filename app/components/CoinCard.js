@@ -35,19 +35,19 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start'
   },
   iconContainer: {
-    height: 68,
-    width: 68,
-    borderRadius: 34,
+    height: 64,
+    width: 64,
+    borderRadius: 32,
     borderWidth: 2,
     alignItems: 'center',
     borderColor: COLORS.WHITE,
     position: 'absolute',
-    marginTop: -34,
-    marginHorizontal: 12
+    marginTop: -32,
+    marginHorizontal: 10
   },
   coinIcon: {
-    height: 64,
-    width: 64
+    height: 60,
+    width: 60
   },
 
   cardTitle: {
