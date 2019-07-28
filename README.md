@@ -9,6 +9,8 @@ Starter React Native project.
 
 [Demo Android APK](https://github.com/valdio/CryptoMarket/blob/master/__apk__/CryptoMarket.apk)
 
+React Native app build utilizing the [CoinMarketCap API](https://coinmarketcap.com/api/). To run the app in your machine, clone the repo and create the `.credentials.js` file with your CoinMarketCap KEY, inside the `app/lib/` directory. (Follow the example `.credentials.example.js` file.)
+
 #### Used libraries:
 * redux
 * react-redux
