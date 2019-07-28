@@ -64,7 +64,7 @@ Build Android APK
 cd android
 ./gradlew clean #clean cached android data
 ./gradlew assembleRelease #build for release
-./gradlew assembleDebug #build for debun
+./gradlew assembleDebug #build for debug
 
 #APK generated under folder
 # /android/app/build/outputs/apk
