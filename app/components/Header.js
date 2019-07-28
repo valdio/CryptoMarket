@@ -1,6 +1,6 @@
 import React from 'react'
 import {Header, Left, Body, Right, Button, Title} from 'native-base'
-import {Image, StatusBar, StyleSheet, View} from 'react-native'
+import {Image, StatusBar, StyleSheet} from 'react-native'
 import {DEVICE} from '../lib/device'
 import {COLORS, Typography} from '../template'
 

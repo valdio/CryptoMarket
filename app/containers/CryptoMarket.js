@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {View, Text, FlatList, StatusBar} from 'react-native'
+import {View, FlatList} from 'react-native'
 import {connect} from 'react-redux'
 import styles from './styles/cryptoMarket'
 import CryptoItem from '../components/CryptoItem'

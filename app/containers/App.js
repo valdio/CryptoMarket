@@ -4,17 +4,13 @@ import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
 import {ActionCreators} from '../actions'
 import {NativeRouter, BackButton, Switch, Route} from 'react-router-native'
-import {ROUTE} from '../lib/routing/routes'
 import {globalRoutes} from '../lib/routing/globalRoute'
-import {DEVICE} from '../lib/device'
 import styles from './styles/app'
 
 class App extends Component {
   constructor(props) {
     super(props)
     this.state = {}
-
-    this._setGlobalRoute = this._setGlobalRoute.bind(this)
     this._renderRoutes = this._renderRoutes.bind(this)
   }
 
@@ -41,9 +37,6 @@ class App extends Component {
         }}/>)}
     </Switch>
   }
-
-  _setGlobalRoute = (route) =>
-    setTimeout(() => this.setState({globalRoute: route}), 1)
 }
 
 //bind the redux actions to the app pros to we can dispatch redux actions thought props
@@ -54,7 +47,7 @@ function mapDispatchToProps(dispatch) {
 //map portions of the redux state to this component's props
 function mapStateToProps(state) {
   return {
-    // user: state.user,
+    // test: state.test
   }
 }
 

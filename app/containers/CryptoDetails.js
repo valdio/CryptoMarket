@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {View, Text, ScrollView, TouchableOpacity, Linking, Easing} from 'react-native'
+import {View, Text, ScrollView, TouchableOpacity, Linking} from 'react-native'
 import {connect} from 'react-redux'
 import styles from './styles/cryptoDetails'
 import AppHeader from '../components/Header'
