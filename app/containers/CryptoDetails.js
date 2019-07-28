@@ -27,7 +27,7 @@ class CryptoDetails extends Component {
 
   render() {
     const crypto = this.props.cryptoList.find(item => item.id === this.state.cryptoID) || {}
-    const metadata = this.props.metadata && this.props.metadata[this.state.cryptoID] || {}
+    const metadata = this.props.metadata && this.props.metadata[this.state.cryptoID] || undefined
 
     const Content = this._renderContent(metadata)
     return (<View style={styles.container}>
@@ -37,7 +37,7 @@ class CryptoDetails extends Component {
         <View style={styles.content}>
           <LinearGradient colors={[COLORS.HEADER_COLOR, COLORS.BLUE, COLORS.LIGHT_BLUE, COLORS.TRANSPARENT]}
                           style={styles.linearGradient}/>
-          {Wave(() => Content)
+          {metadata && Wave(() => Content)
             .applyAnimation(Animate.marginTop, DEVICE.HEIGHT * .7, 0, 500, AnimationType.spring)
             .applyComposition(Composing.parallel)
             .animate()}
@@ -58,7 +58,7 @@ class CryptoDetails extends Component {
     </View>
   }
 
-  _renderContent = (metadata) => <View>
+  _renderContent = (metadata) => !metadata ? <View/> : <View>
     <CoinCard metadata={metadata}/>
     <View style={styles.detailsSection}>
       <Text style={styles.readMore}>Read more...</Text>

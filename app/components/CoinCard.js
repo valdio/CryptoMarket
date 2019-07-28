@@ -7,7 +7,6 @@ export default CoinCard = ({metadata} = props) => {
   return (<View style={styles.container}>
     <View style={styles.iconContainer}>
       <FastImage
-        testID="card-coinIcon"
         style={styles.coinIcon}
         source={{uri: metadata.logo || '', priority: FastImage.priority.normal}}
         resizeMode={FastImage.resizeMode.contain}
