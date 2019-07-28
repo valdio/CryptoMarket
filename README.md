@@ -1,10 +1,15 @@
 # CryptoMarket
-Cryptocurrency stats monitor and coin details react-native app
+Cryptocurrency stats monitor and coin details react-native app.
+
+|![Screenshot](https://github.com/valdio/CryptoMarket/blob/master/__screenshots__/coinList.png)|![Screenshot](https://github.com/valdio/CryptoMarket/blob/master/__screenshots__/coinDetails.png)|
+| ------------- | ------------- |
 
 ### NOTE! 
 Starter React Native project.
 
-Used libraries:
+[Demo Android APK](https://github.com/valdio/CryptoMarket/blob/master/__apk__/CryptoMarket.apk)
+
+#### Used libraries:
 * redux
 * react-redux
 * redux-logger
@@ -14,7 +19,7 @@ Used libraries:
 * react-native-fast-image - Image caching
 * react-native-wave - functional animation package
 
-For testing configured with:
+#### Testing configured with:
 * jest
 * enzyme
 ```shell script
